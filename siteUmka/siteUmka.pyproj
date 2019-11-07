@@ -35,12 +35,24 @@
     <Compile Include="siteUmka\settings.py" />
     <Compile Include="siteUmka\urls.py" />
     <Compile Include="siteUmka\wsgi.py" />
+    <Compile Include="UmkaPage\admin.py" />
+    <Compile Include="UmkaPage\apps.py" />
+    <Compile Include="UmkaPage\migrations\__init__.py" />
+    <Compile Include="UmkaPage\models.py" />
+    <Compile Include="UmkaPage\tests.py" />
+    <Compile Include="UmkaPage\views.py" />
+    <Compile Include="UmkaPage\__init__.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
+    <Content Include="UmkaPage\templates\UmkaPage\index.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="siteUmka\" />
+    <Folder Include="UmkaPage\" />
+    <Folder Include="UmkaPage\migrations\" />
+    <Folder Include="UmkaPage\templates\" />
+    <Folder Include="UmkaPage\templates\UmkaPage\" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
