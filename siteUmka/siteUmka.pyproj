@@ -31,9 +31,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="manage.py" />
+    <Compile Include="siteUmka\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="siteUmka\views.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="siteUmka\__init__.py" />
     <Compile Include="siteUmka\settings.py" />
-    <Compile Include="siteUmka\urls.py" />
+    <Compile Include="UmkaPage\urls.py" />
     <Compile Include="siteUmka\wsgi.py" />
     <Compile Include="UmkaPage\admin.py" />
     <Compile Include="UmkaPage\apps.py" />
@@ -45,12 +51,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
+    <Content Include="UmkaPage\static\UmkaPage\style.css" />
+    <Content Include="UmkaPage\templates\base.html" />
+    <Content Include="UmkaPage\templates\UmkaPage\accueil.html" />
+    <Content Include="UmkaPage\templates\UmkaPage\home.html">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="UmkaPage\templates\UmkaPage\index.html" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="UmkaPage\static\" />
     <Folder Include="siteUmka\" />
     <Folder Include="UmkaPage\" />
     <Folder Include="UmkaPage\migrations\" />
+    <Folder Include="UmkaPage\static\UmkaPage\" />
     <Folder Include="UmkaPage\templates\" />
     <Folder Include="UmkaPage\templates\UmkaPage\" />
   </ItemGroup>

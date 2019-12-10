@@ -1,0 +1,23 @@
+
+{% extends 'base.html' %}
+<h1>Home</h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %} <!-- tout ce qui sera dans le block est lié au fichier base.html -->
+        
+            <title>Home</title>
+
+        {% endblock %}
+
+    </head>
+    <body>
+
+        {% block body %}
+
+        <h1>Base</h1>
+        {% endblock %}
+
+    </body>
+</html>
+
