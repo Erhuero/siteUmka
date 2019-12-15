@@ -33,25 +33,40 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     # Add your apps here to enable them
-    'UmkaPage',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'UmkaPage',
 ]
 
-MIDDLEWARE_CLASSES = [
+
+MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+
+MIDDLEWARE_CLASSES = [
+
+    'django.middleware.security.SecurityMiddleware',
+    
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    
+    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+    
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
 
 ROOT_URLCONF = 'siteUmka.urls'
 
@@ -80,7 +95,7 @@ WSGI_APPLICATION = 'siteUmka.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-         'NAME': 'umka', #preciser un folder vide dans pgAdmin4
+        'NAME': 'umka', #preciser un folder vide dans pgAdmin4
         'USER': 'postgres',
         'PASSWORD': 'ok',
         'HOST': '127.0.0.1',
@@ -129,9 +144,3 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
 
-SILENCED_SYSTEM_CHECKS = [
-    'admin.E408',
-    'admin.E409',
-    'admin.E410',
-
-]

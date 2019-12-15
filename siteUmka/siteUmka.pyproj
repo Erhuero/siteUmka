@@ -46,13 +46,12 @@
     <Compile Include="UmkaPage\migrations\__init__.py" />
     <Compile Include="UmkaPage\models.py" />
     <Compile Include="UmkaPage\tests.py" />
-    <Compile Include="UmkaPage\views.py" />
     <Compile Include="UmkaPage\__init__.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
     <Content Include="UmkaPage\static\UmkaPage\style.css" />
-    <Content Include="UmkaPage\templates\base.html" />
+    <Content Include="UmkaPage\templates\UmkaPage\articles.html" />
     <Content Include="UmkaPage\templates\UmkaPage\accueil.html" />
     <Content Include="UmkaPage\templates\UmkaPage\home.html">
       <SubType>Code</SubType>

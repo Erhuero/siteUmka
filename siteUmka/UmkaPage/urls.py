@@ -8,14 +8,12 @@ import UmkaPage.views
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
-# admin.autodiscover()
-from django.conf.urls import url, include
-
+#admin.autodiscover()
 urlpatterns = [
 
     #path('accueil', UmkaPage.views.home),
     # Examples:
-   # url(r'^$', UmkaPage.views.accueil, name='accueil'), #le $ est le routage pour la racine du site
+    # url(r'^$', UmkaPage.views.accueil, name='accueil'), #le $ est le routage pour la racine du site
     #url(r'^siteUmka/', include('siteUmka.siteUmka.urls')),
 
     #url(r'^$home', UmkaPage.views.index, name='home'),
@@ -28,6 +26,8 @@ urlpatterns = [
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
+    
+    url('admin/', admin.site.urls),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^UmkaPage', include('UmkaPage.urls')),
 ]
