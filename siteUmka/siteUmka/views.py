@@ -14,6 +14,11 @@ def home(request):
     args= {'asso': nom, 'numbers': numbers}
     return render(request, 'UmkaPage/accueil.html', args)
 
+def nousApprenons(request):
+    
+
+    return render(request, 'UmkaPage/nousApprenons.html', args)
+
 def articles(request):
     #Affiche tous les articles
     articles = Article.objects.all() #selectionne tous les articles
@@ -27,4 +32,26 @@ def lire(request, id):
             raise Http404
 
        return render(request, 'UmkaPage/lire.html', {'article': article})
+
+def insertion_photo(request):
+    sauvegarde = False
+    validation = nouvelleValidation(request.POST or None, rerequest.FILES)
+    if validation.is_valid():
+        photoArticle = Article()
+        photoArticle = sauvegarde.cleaned_data["photo"]
+        photoArticle.save()
+        sauvegarde = True
+
+    return render(request, 'articles.html', {
+        'validation': validation,
+        'sauvegarde': sauvegarde,
+        })
+
+def voir_photos(request):
+    return render(
+        request,
+        'articles.html',
+        {'photos': Photo.objects.all()}
+    )
+    
 

@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 
 import os
 import posixpath
+from django.conf import settings
+from django.conf.urls.static import static
+
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -27,6 +31,11 @@ SECRET_KEY = '0bbda576-5d95-42a9-8547-576abbf1195a'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+MEDIA_URL = '/media/'#is the absolute filesystem path to the directory for user-uploaded files
+MEDIA_ROOT = os.path.join(BASE_DIR,'media') #is the URL we can use in our templates for the files
+
+#urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
 
 
 # Application definition
@@ -41,8 +50,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'UmkaPage',
+    'crispy_forms',
 ]
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

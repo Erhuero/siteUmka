@@ -57,6 +57,14 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="UmkaPage\templates\UmkaPage\index.html" />
+    <Content Include="UmkaPage\templates\UmkaPage\nosInfos.html" />
+    <Content Include="UmkaPage\templates\UmkaPage\nousOrganisons.html" />
+    <Content Include="UmkaPage\templates\UmkaPage\nousApprenons.html" />
+    <Content Include="UmkaPage\templates\UmkaPage\nousChantonsDansons.html" />
+    <Content Include="UmkaPage\templates\UmkaPage\nousColaborons.html" />
+    <Content Include="UmkaPage\templates\UmkaPage\nousDessinons.html" />
+    <Content Include="UmkaPage\templates\UmkaPage\nousCelebrons.html" />
+    <Content Include="UmkaPage\templates\UmkaPage\nousJouons.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="UmkaPage\static\" />

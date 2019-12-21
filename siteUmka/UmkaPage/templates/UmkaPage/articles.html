@@ -18,5 +18,27 @@
 {% empty %}
     <p>Aucun article.</p>
 {% endfor %}
+
+    {% if sauvegarde %}
+        <p>Photo enregistrée</p>
+    {% endif %}
+
+   
+        <form method="post" enctype="multipart/form-data" action=".">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit"/>
+        </form>
+    
+
+    <h1>Liste des photos</h1>
+    {% for photos in photos %}
+        <h2>{{ photos.refPhoto }}</h2>
+            <img src=" {{ photos.photos.url }}"/>
+    {% endfor %}
+
+
+
+
 </body>
 </html>

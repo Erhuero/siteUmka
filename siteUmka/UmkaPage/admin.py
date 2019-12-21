@@ -3,6 +3,7 @@ from .models import * #importation de toutes les tables pour les utiliser en mod
 
 class ArticleAdmin(admin.ModelAdmin):
     list_display = ('nomArticle', 'contenuArticle')
+    list_display=('photoArticle','nomArticle')
     list_filter = ('nomArticle', 'contenuArticle')
     date_hierarchy = 'dateArticle'
     search_fields = ('nomArticle', 'contenuArticle')
@@ -15,8 +16,9 @@ class ArticleAdmin(admin.ModelAdmin):
             }),
 
             ('Ajouter une photo', {
-                'fields': ('stockagePhoto','nomPhoto', )
-                }),
+                'description': 'Insérez la photo',
+                'fields': ('photoArticle', )
+                    }),
 
                 ('Contenu de l\'article', {
                     'description': 'Le formulaire accepte les balises HTML.',
@@ -37,6 +39,7 @@ class PhotoAdmin(admin.ModelAdmin):
     pass
 
 admin.site.register(Article, ArticleAdmin)
+admin.site.register(Ajouter)
 
 
 
