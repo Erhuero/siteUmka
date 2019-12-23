@@ -4,24 +4,40 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from datetime import datetime
 
-from UmkaPage.models import Article
+from UmkaPage.models import *
 
 
-def home(request):
-    numbers =[1,2,3,4,5]
-    nom= 'UMKA'
 
-    args= {'asso': nom, 'numbers': numbers}
-    return render(request, 'UmkaPage/accueil.html', args)
+def informations(request):
+    articles = Article.objects.all()
+    return render(request, 'UmkaPage/nosInfos.html')
 
-def nousApprenons(request):
-    
+def apprentissage(request):
+    return render(request, 'UmkaPage/nousApprenons.html')
 
-    return render(request, 'UmkaPage/nousApprenons.html', args)
+def celebrations(request):
+    return render(request,'UmkaPage/nousCelebrons.html')
+
+def chantons(request):
+    return render(request, 'UmkaPage/nousChantonsDansons.html')
+
+def collaboration(request):
+    return render(request, 'UmkaPage/nousColaborons.html')
+
+def dessiner(request):
+    return render(request, 'UmkaPage/nousDessinons.html')
+
+def jouer(request):
+    return render(request, 'UmkaPage/nousJouons.html')
+
+def organiser(request):
+    return render(request, 'UmkaPage/nousOrganisons.html')
+
 
 def articles(request):
     #Affiche tous les articles
     articles = Article.objects.all() #selectionne tous les articles
+    photos = Photo.objects.all()
     return render(request, 'UmkaPage/articles.html', {'derniers_articles': articles})
 
 def lire(request, id):

@@ -1,11 +1,24 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'UmkaPage/style.css' %}" media="" title="no title" />
+    </head>
 <body>
+    <p>
+        Nos fêtes !
+    </p>
+    <a href="{% url 'articles' %}">Retour accueil</a>
+    <a href="{% url 'enseignement' %}">Nous apprenons</a>
 
+    <a href="{% url 'chansons' %}">Nous chantons</a>
+    <a href="{% url 'collaborations' %}">Nous collaborons</a>
+    <a href="{% url 'dessin' %}">Nous dessinons</a>
+    <a href="{% url 'jeu' %}">Nous jouons</a>
+    <a href="{% url 'organiser' %}">Nous organisons</a>
 </body>
 </html>

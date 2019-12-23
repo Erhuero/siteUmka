@@ -1,6 +1,8 @@
 from django.contrib import admin
 from .models import * #importation de toutes les tables pour les utiliser en mode admin
 
+admin.site.site_header= 'Administration de votre site'
+
 class ArticleAdmin(admin.ModelAdmin):
     list_display = ('nomArticle', 'contenuArticle')
     list_display=('photoArticle','nomArticle')

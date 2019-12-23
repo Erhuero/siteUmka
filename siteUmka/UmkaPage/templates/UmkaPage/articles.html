@@ -8,6 +8,11 @@
 <!DOCTYPE html>
 <html>
 <body>
+
+    <a href="{% url 'infos' %}">Les informations</a>
+
+
+
 {% for article in derniers_articles %}
     <div class="article">
     	<h3>{{ article.nomArticle }}</h3>
