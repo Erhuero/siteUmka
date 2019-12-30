@@ -9,15 +9,21 @@
 <html>
 <body>
 
-    <a href="{% url 'infos' %}">Les informations</a>
-
-
+<ul>
+    <li><a href="{% url 'infos' %}">Les informations</a></li>
+    <li><a href="{% url 'enseignement' %}">Nous apprenons</a></li>
+    <li><a href="{% url 'fetes' %}">Nous fetons</a></li>
+    <li><a href="{% url 'chansons' %}">Nous chantons</a></li>
+    <li><a href="{% url 'collaborations' %}">Nous collaborons</a></li>
+    <li><a href="{% url 'dessin' %}">Nous dessinons</a></li>
+    <li><a href="{% url 'jeu' %}">Nous jouons</a></li>
+    <li><a href="{% url 'organiser' %}">Nous organisons</a></li>
+</ul>
 
 {% for article in derniers_articles %}
     <div class="article">
     	<h3>{{ article.nomArticle }}</h3>
         <h3>{{ article.contenuArticle }}</h3>
-        <p><a href="{% url 'lire' article.refArticle %}">Lire la suite</a></p>
     </div>
 
 {% empty %}
@@ -28,21 +34,7 @@
         <p>Photo enregistrée</p>
     {% endif %}
 
-   
-        <form method="post" enctype="multipart/form-data" action=".">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit"/>
-        </form>
     
-
-    <h1>Liste des photos</h1>
-    {% for photos in photos %}
-        <h2>{{ photos.refPhoto }}</h2>
-            <img src=" {{ photos.photos.url }}"/>
-    {% endfor %}
-
-
 
 
 </body>

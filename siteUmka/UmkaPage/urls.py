@@ -17,11 +17,7 @@ urlpatterns = [
     #url(r'^siteUmka/', include('siteUmka.siteUmka.urls')),
 
     #url(r'^$home', UmkaPage.views.index, name='home'),
-
     
-
-    
-
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 

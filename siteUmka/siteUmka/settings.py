@@ -32,7 +32,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 MEDIA_URL = '/media/'#is the absolute filesystem path to the directory for user-uploaded files
-MEDIA_ROOT = os.path.join(BASE_DIR,'media') #is the URL we can use in our templates for the files
+MEDIA_ROOT = os.path.join(BASE_DIR,'UmkaPage/media') #is the URL we can use in our templates for the files
 
 #urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

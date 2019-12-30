@@ -53,10 +53,7 @@
     <Content Include="UmkaPage\static\UmkaPage\style.css" />
     <Content Include="UmkaPage\templates\UmkaPage\articles.html" />
     <Content Include="UmkaPage\templates\UmkaPage\accueil.html" />
-    <Content Include="UmkaPage\templates\UmkaPage\home.html">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="UmkaPage\templates\UmkaPage\index.html" />
+    <Content Include="UmkaPage\templates\UmkaPage\base.html" />
     <Content Include="UmkaPage\templates\UmkaPage\nosInfos.html" />
     <Content Include="UmkaPage\templates\UmkaPage\nousOrganisons.html" />
     <Content Include="UmkaPage\templates\UmkaPage\nousApprenons.html" />
@@ -67,6 +64,7 @@
     <Content Include="UmkaPage\templates\UmkaPage\nousJouons.html" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="UmkaPage\media\" />
     <Folder Include="UmkaPage\static\" />
     <Folder Include="siteUmka\" />
     <Folder Include="UmkaPage\" />
